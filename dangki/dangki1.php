@@ -4,12 +4,12 @@ if(isset($_GET['id'])){
    $sql = "SELECT * from user where email = '" . $_GET['id'] . "'";
    $result = mysqli_query($conn,$sql);
    $rows = mysqli_fetch_assoc($result);
-   if ($rows['status'] == $_POST['ma']){
+   if ($rows['code'] == $_POST['ma']){
      echo '<h3 style ="text-align : center">Đăng Ký Thành Công !</h3>';
      require 'ketnoi.php';
-     $sqlii = "UPDATE user set status = 1,user_level=1 where email = '" . $_GET['id'] . "'";
+     $sqlii = "UPDATE user set status = 1 where email = '" . $_GET['id'] . "'";
      $resultii = mysqli_query($conn,$sqlii);
-     require 'index.html';
+     require 'login.php';
    }
    else {
      echo'<h3>Sai mã OTP !</h3>';
@@ -34,7 +34,7 @@ if($rows>0){
 }else{
     //tao tai khoan
     $a = rand(10000,99999);
-    $sql = "INSERT into user(iduser,email,name,phone,address,password,status) values(null,'" . $_POST['email'] . "','" .$_POST['userName'] . "',null,null,'". $_POST['password']."',$a)";
+    $sql = "INSERT into user(iduser,email,name,phone,address,password,status,code) values(null,'" . $_POST['email'] . "','" .$_POST['userName'] . "',0,'haha','". $_POST['password']."',0,$a)";
     $result = mysqli_query($conn,$sql);
     if(!$result){
       die('chua them duoc');
@@ -46,7 +46,7 @@ if($rows>0){
       $mail->Host = 'smtp.gmail.com;';                       // Specify main and backup SMTP servers  
       $mail->SMTPAuth = true;                                // Enable SMTP authentication  
       $mail->Username = 'traituoirong2411@gmail.com';               // your SMTP username  
-      $mail->Password = 'sqjjznytuusymvas';                      // your SMTP password  
+      $mail->Password = 'syhveladbzjpajmg';                      // your SMTP password  
       $mail->SMTPSecure = 'tls';                             // Enable TLS encryption, `ssl` also accepted  
       $mail->Port = 587;                                     // TCP port to connect to  
       $mail->setFrom('traituoirong2411@gmail.com', 'Chợ Online');  
