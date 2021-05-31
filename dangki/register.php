@@ -48,7 +48,7 @@
     </div>
 
     <div class="register-container">
-      <formclass="form-register" action="dangki1.php" method="post" >
+      <form class="form-register" action="dangki1.php" method="post" >
         <h1>Đăng ký</h1>
         <div class="input-wrapper">
           <input type="text" name="userName" placeholder="Nhập họ tên của bạn" />
