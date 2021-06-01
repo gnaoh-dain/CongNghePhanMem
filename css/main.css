@@ -198,7 +198,7 @@ a {
   grid-template-columns: repeat(5, 1fr);
 }
 
-.header-product {
+.header {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 30px;
@@ -233,4 +233,79 @@ a {
   line-height: 1.33;
   color: #d0021b;
   margin-bottom: 10px;
+}
+
+
+/* user infomation */
+
+.user-information-container {
+  width: 60%;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.info-form {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+.avatar {
+  width: 50%;
+  margin: 0 50px;
+}
+
+
+.user-name {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.avatar label:hover{
+  cursor: pointer;
+}
+
+.avatar img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.info{
+  width: 70%;
+}
+
+.input-wrapper-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.input-wrapper-info label {
+  font-weight: bold;
+}
+
+.input-wrapper-info > input {
+  /* border: ; */
+  height: 38px;
+  width: 80%;
+  margin-top: 15px;
+}
+
+
+
+.btn-info{
+  margin-top: 15px;
+  width: 80%;
+  height: 38px;
+  background-color: #ffba00;
+  /* border: 5px solid #ffba00; */
+  border-radius: 5px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.btn-info:hover {
+  cursor: pointer;
 }

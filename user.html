@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="nav-container">
+      <div class="nav">
+        <div class="aside-left">
+          <div class="logo">
+            <img src="https://static.chotot.com/storage/default/transparent_logo.webp" alt="" />
+          </div>
+        </div>
+
+        <div class="aside-right">
+          <div>
+            <a href="./index.html"><i class="ri-home-line"></i> Trang chủ</a>
+          </div>
+          <div>
+            <a href="./management.html"><i class="ri-group-line"></i> Quản lí tin</a>
+          </div>
+          <div><i class="ri-more-line"></i> Thêm</div>
+        </div>
+
+        <div class="aside-left">
+          <div class="search">
+            <form action="" class="form-search">
+              <span>Search</span>
+              <input type="text" name="search" />
+              <button class="btn" type="submit"><i class="ri-search-line"></i></button>
+            </form>
+          </div>
+        </div>
+        <div class="aside-right">
+          <div><a href="./dangki/login.php">Đăng nhập</a></div>
+          <div><a href="#">Upload</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="user-information-container">
+      <div class="header">Thông tin cá nhân</div>
+      <form action="" class="info-form">
+        <div class="avatar">
+          <div class="input-img">
+            <label for="inputImg">
+              <img
+                id="avatar"
+                src="../CongNghePhanMem/images/20653430.jpg"
+                alt="Thay đổi ảnh đại diện"
+              />
+            </label>
+            <input
+              id="inputImg"
+              name="avartaChange"
+              type="file"
+              accept="image/*"
+              style="display: none; visibility: hidden"
+              onchange="getImg(this.value)"
+            />
+          </div>
+          <div class="user-name">Tô Việt Hoàng</div>
+        </div>
+        <div class="info">
+          <div class="input-wrapper-info">
+            <label for="name">Họ và tên</label>
+            <input type="text" name="name" placeholder="" />
+          </div>
+          <div class="input-wrapper-info">
+            <label for="phone">Số điện thoại</label>
+            <input type="text" name="phone" placeholder="" />
+          </div>
+          <div class="input-wrapper-info">
+            <label for="address">Địa chỉ</label>
+            <input type="text" name="address" placeholder="" />
+          </div>
+          <div class="input-wrapper-info">
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="" />
+          </div>
+          <div class="input-wrapper-info">
+            <label for="password">Password</label>
+            <input type="password" name="password" placeholder="" />
+          </div>
+          <button type="submit" class="btn-info">Lưu thay đổi</button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function getImg(evt) {
+        // let newImg = imgName.replace(/^.*\\/, "");
+        // let avatar = document.getElementById("avatar");
+        // avatar.src = newImg.src
+        // console.dir(avatar)
+        var tgt = evt.target || window.event.srcElement,
+          files = tgt.files;
+
+        // FileReader support
+        if (FileReader && files && files.length) {
+          var fr = new FileReader();
+          fr.onload = function () {
+            document.getElementById("avatar").src = fr.result;
+          };
+          fr.readAsDataURL(files[0]);
+        }
+
+        // Not supported
+        else {
+          // fallback -- perhaps submit the input to an iframe and temporarily store
+          // them on the server until the user's session ends.
+        }
+      }
+    </script>
+  </body>
+</html>
