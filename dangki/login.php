@@ -22,7 +22,7 @@
 
         <div class="aside-right">
           <div>
-            <a href="./index.html"><i class="ri-home-line"></i> Trang chủ</a>
+            <a href="../index.php"><i class="ri-home-line"></i> Trang chủ</a>
           </div>
           <div>
             <a href="./management.html"><i class="ri-group-line"></i> Quản lí tin</a>
@@ -58,7 +58,7 @@
         </div>
         <div class="submit">
           <button type="submit">Đăng Nhập</button>
-          <div>Bạn chưa có tài khoản? <a href="./register.html">Đăng ký</a></div>
+          <div>Bạn chưa có tài khoản? <a href="./register.php">Đăng ký</a></div>
         </div>
       </form>
     </div>

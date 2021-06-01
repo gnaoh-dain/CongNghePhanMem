@@ -23,7 +23,7 @@
 
         <div class="aside-right">
           <div>
-            <a href="./index.html"><i class="ri-home-line"></i> Trang chủ</a>
+            <a href="http://localhost:85/CongNghePhanMem/index.php"><i class="ri-home-line"></i> Trang chủ</a>
           </div>
           <div>
             <a href="./management.html"><i class="ri-group-line"></i> Quản lí tin</a>
@@ -64,7 +64,7 @@
         </div>
         <div class="submit">
           <button type="submit">Đăng ký</button>
-          <div>Bạn đã có tài khoản? <a href="./login.html">Đăng nhập</a></div>
+          <div>Bạn đã có tài khoản? <a href="./login.php">Đăng nhập</a></div>
         </div>
       </form>
     </div>

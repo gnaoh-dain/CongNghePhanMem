@@ -26,7 +26,7 @@
 
         <div class="aside-right">
           <div>
-            <a href="./index.html"><i class="ri-home-line"></i> Trang chủ</a>
+            <a href="./index.php"><i class="ri-home-line"></i> Trang chủ</a>
           </div>
           <div>
             <a href="./management.html"><i class="ri-group-line"></i> Quản lí tin</a>
@@ -51,8 +51,12 @@
           <div><a href="./dangki/login.php">Đăng nhập</a></div>
           <div><a href="#">Đăng Tin</a></div>
           <?php
-        }else{?>
-         <div><a href="user.php">Phạm Thanh Quân</a></div>
+        }else{
+          $sql = "SELECT * from user where email='". $_SESSION['email']."'";
+          $result = mysqli_query($conn,$sql);
+         $row = $result->fetch_assoc();
+          ?>
+         <div><a href="user.php"><?php echo $row["name"] ?></a></div>
           <div><a href="#">Đăng Tin</a></div>
        <?php 
         }
