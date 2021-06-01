@@ -1,3 +1,4 @@
+<?php session_start();?>
 <?php
 include 'ketnoi.php';
     if(isset($_POST['email'])&& !empty($_POST['email']) && isset($_POST['pass']) && !empty($_POST['pass'])){
@@ -31,8 +32,9 @@ include 'ketnoi.php';
         }
         else{
             if($rows['password'] == ($_POST['pass'])){
-            
-                    header('location:http://localhost:85/CongNghePhanMem/index.html');
+                $_SESSION['email'] = $rows['email'];
+                $_SESSION['level'] = $rows['user_level'];
+                header('location:http://localhost:85/CongNghePhanMem/index.php');
                 }
             else{
                 echo '<H3 style ="text-align : center">Sai Password !</H3>';
