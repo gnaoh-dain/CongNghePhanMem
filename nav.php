@@ -49,7 +49,7 @@
         if(!isset($_SESSION['email'])){
           ?>
           <div><a href="./dangki/login.php">Đăng nhập</a></div>
-          <div><a href="#">Đăng Tin</a></div>
+          <div><a href="./dangki/login.php">Đăng Tin</a></div>
           <?php
         }else{
           $sql = "SELECT * from user where email='". $_SESSION['email']."'";

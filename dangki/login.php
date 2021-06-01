@@ -40,8 +40,8 @@
           </div>
         </div>
         <div class="aside-right">
-          <div><a href="#">Đăng nhập</a></div>
-          <div><a href="#">Upload</a></div>
+          <div><a href="login.php">Đăng nhập</a></div>
+          <div><a href="login.php">Đăng Tin</a></div>
         </div>
       </div>
     </div>
