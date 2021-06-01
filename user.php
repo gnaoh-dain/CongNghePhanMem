@@ -1,7 +1,23 @@
-<?php require 'nav.php' ?>
+
+<?php
+require 'nav.php';
+require 'ketnoi.php';
+if(isset($_GET['action'])){
+ $sql = "UPDATE user SET name = '".$_POST['name']."',email = '".$_POST['email']."',phone = '".$_POST['phone']."',address = '".$_POST['address']."',password = '".$_POST['password']."' WHERE  iduser = '". $_GET['action'] ."'";
+ $result = mysqli_query($conn,$sql);
+  header('location:user.php');
+}
+else{
+$sql = "SELECT * from user where email='". $_SESSION['email']."'";
+$result = mysqli_query($conn,$sql);
+$row = $result->fetch_assoc();
+mysqli_close($conn);
+if(!empty($row)){
+?>
+
     <div class="user-information-container">
       <div class="header">Thông tin cá nhân</div>
-      <form action="" class="info-form">
+      <form action="user.php?action=<?php echo $row["iduser"] ?>" method = "POST" class="info-form" enctype ="multipart/form-data">
         <div class="avatar">
           <div class="input-img">
             <label for="inputImg">
@@ -20,7 +36,6 @@
               onchange="getImg(this.value)"
             />
           </div>
-          <div class="user-name">Tô Việt Hoàng</div>
         </div>
         <div class="info">
           <div class="input-wrapper-info">
@@ -64,3 +79,4 @@
     </script>
   </body>
 </html>
+<?php } } ?>

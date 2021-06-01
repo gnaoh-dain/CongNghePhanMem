@@ -52,7 +52,7 @@
           <div><a href="#">Đăng Tin</a></div>
           <?php
         }else{?>
-         <div><a href="user.html">Phạm Thanh Quân</a></div>
+         <div><a href="user.php">Phạm Thanh Quân</a></div>
           <div><a href="#">Đăng Tin</a></div>
        <?php 
         }
