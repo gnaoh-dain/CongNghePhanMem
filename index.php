@@ -86,9 +86,9 @@
       </div>
     </div>
     <?php
-    $sqli = "SELECT TOP 10 * FROM sanpham where email = '" . $_POST['email'] . "' ORDER BY idsp DESC";
+    $sqli = "SELECT TOP 10 * FROM sanpham ORDER BY idsp DESC";
     $resulti = mysqli_query($conn,$sqli);
-    $rows = mysqli_fetch_assoc($resulti);
+    //$rows = mysqli_fetch_assoc($resulti);
      ?>
     <div class="product-container">
       <div class="header-product">Tin đăng dành cho bạn</div>
