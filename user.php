@@ -3,9 +3,10 @@
 require 'nav.php';
 require 'ketnoi.php';
 if(isset($_GET['action'])){
- $sql = "UPDATE user SET name = '".$_POST['name']."',email = '".$_POST['email']."',phone = '".$_POST['phone']."',address = '".$_POST['address']."',password = '".$_POST['password']."' WHERE  iduser = '". $_GET['action'] ."'";
+  $a = addslashes(file_get_contents($_FILES['avatar']['tmp_name']));
+ $sql = "UPDATE user SET name = '".$_POST['name']."',email = '".$_POST['email']."',phone = '".$_POST['phone']."',address = '".$_POST['address']."',password = '".$_POST['password']."',photo = '".$a."' WHERE  iduser = '". $_GET['action'] ."'";
  $result = mysqli_query($conn,$sql);
-  header('location:user.php');
+header('location:user.php');
 }
 else{
 $sql = "SELECT * from user where email='". $_SESSION['email']."'";
@@ -21,15 +22,13 @@ if(!empty($row)){
         <div class="avatar">
           <div class="input-img">
             <label for="inputImg">
-              <img
-                id="avatar"
-                src="../CongNghePhanMem/images/20653430.jpg"
-                alt="Thay đổi ảnh đại diện"
-              />
+            <div>
+               <?php echo'<img id="avatar" src="data:avatar;base64,'.base64_encode($row['photo']).'"alt="Thay đổi ảnh đại diện">'; ?>
+           </div>
             </label>
             <input
               id="inputImg"
-              name="avartaChange"
+              name="avatar"
               type="file"
               accept="image/*"
               style="display: none; visibility: hidden"
@@ -40,23 +39,23 @@ if(!empty($row)){
         <div class="info">
           <div class="input-wrapper-info">
             <label for="name">Họ và tên</label>
-            <input type="text" name="name" placeholder="" />
+            <input type="text" value = "<?php echo $row['name'];?>" name="name" placeholder="" />
           </div>
           <div class="input-wrapper-info">
             <label for="phone">Số điện thoại</label>
-            <input type="text" name="phone" placeholder="" />
+            <input type="text" value = "<?php echo $row['phone'];?>" name="phone" placeholder="" />
           </div>
           <div class="input-wrapper-info">
             <label for="address">Địa chỉ</label>
-            <input type="text" name="address" placeholder="" />
+            <input type="text" value = "<?php echo $row['address'];?>" name="address" placeholder="" />
           </div>
           <div class="input-wrapper-info">
             <label for="email">Email</label>
-            <input type="email" name="email" placeholder="" />
+            <input type="email" value = "<?php echo $row['email'];?>" name="email" placeholder="" />
           </div>
           <div class="input-wrapper-info">
             <label for="password">Password</label>
-            <input type="password" name="password" placeholder="" />
+            <input type="password" value = "<?php echo $row['password'];?>" name="password" placeholder="" />
           </div>
           <button type="submit" class="btn-info">Lưu thay đổi</button>
         </div>
