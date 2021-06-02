@@ -57,7 +57,7 @@ require 'nav.php'; ?>
     //$rows = mysqli_fetch_assoc($resulti);
      ?>
     <div class="product-container">
-      <div class="header-product">Tin đăng dành cho bạn</div>
+      <div class="header">Tin đăng dành cho bạn</div>
       <div class="products">
         <div class="product">
           <a href="#">
