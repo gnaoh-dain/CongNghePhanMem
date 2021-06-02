@@ -12,24 +12,22 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="nav-container">
+  <div class="nav-container">
       <div class="nav">
         <div class="aside-left">
           <div class="logo">
-            <img src="https://static.chotot.com/storage/default/transparent_logo.webp" alt="" />
+            <img src="../images/choOnline.png" alt="" />
           </div>
         </div>
-
         <div class="aside-right">
           <div>
-            <a href="../index.php"><i class="ri-home-line"></i> Trang chủ</a>
+            <a href="http://localhost:85/CongNghePhanMem/index.php"><i class="ri-home-line"></i> Trang chủ</a>
           </div>
           <div>
             <a href="./management.html"><i class="ri-group-line"></i> Quản lí tin</a>
           </div>
           <div><i class="ri-more-line"></i> Thêm</div>
         </div>
-
         <div class="aside-left">
           <div class="search">
             <form action="" class="form-search">
@@ -45,8 +43,6 @@
         </div>
       </div>
     </div>
-    <!-- Nav -->
-
     <div class="login-container">
       <form class="form-login" action="login1.php" method="POST">
         <h1>Đăng nhập</h1>

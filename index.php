@@ -1,6 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    
+    <title>Document</title>
+  </head>
+  <body>
 <?php
 require 'nav.php'; ?>
-    <!-- Nav -->
 
     <div class="category-container">
       <span class="categories">Danh mục</span>
@@ -46,75 +60,186 @@ require 'nav.php'; ?>
       <div class="header-product">Tin đăng dành cho bạn</div>
       <div class="products">
         <div class="product">
-          <div class="img-product">
-            <img src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg" alt="" />
-          </div>
-          <div class="title">Macbook Air M1 2021</div>
-          <div class="price">23.700.000</div>
+          <a href="#">
+            <div class="img-product">
+              <img src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg" alt="" />
+            </div>
+            <div class="title">Macbook Air M1 2021</div>
+            <div class="price">23.700.000</div>
+          </a>
         </div>
         <div class="product">
-          <div class="img-product">
-            <img src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg" alt="" />
-          </div>
-          <div class="title">Macbook Air M1 2021</div>
-          <div class="price">23.700.000</div>
+          <a href="#">
+            <div class="img-product">
+              <img src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg" alt="" />
+            </div>
+            <div class="title">Macbook Air M1 2021</div>
+            <div class="price">23.700.000</div>
+          </a>
         </div>
         <div class="product">
-          <div class="img-product">
-            <img src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg" alt="" />
-          </div>
-          <div class="title">Macbook Air M1 2021</div>
-          <div class="price">23.700.000</div>
+          <a href="#">
+            <div class="img-product">
+              <img src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg" alt="" />
+            </div>
+            <div class="title">Macbook Air M1 2021</div>
+            <div class="price">23.700.000</div>
+          </a>
         </div>
         <div class="product">
-          <div class="img-product">
-            <img src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg" alt="" />
-          </div>
-          <div class="title">Macbook Air M1 2021</div>
-          <div class="price">23.700.000</div>
+          <a href="#">
+            <div class="img-product">
+              <img src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg" alt="" />
+            </div>
+            <div class="title">Macbook Air M1 2021</div>
+            <div class="price">23.700.000</div>
+          </a>
         </div>
         <div class="product">
-          <div class="img-product">
-            <img src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg" alt="" />
-          </div>
-          <div class="title">Macbook Air M1 2021</div>
-          <div class="price">23.700.000</div>
+          <a href="#">
+            <div class="img-product">
+              <img src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg" alt="" />
+            </div>
+            <div class="title">Macbook Air M1 2021</div>
+            <div class="price">23.700.000</div>
+          </a>
         </div>
         <div class="product">
-          <div class="img-product">
-            <img src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg" alt="" />
-          </div>
-          <div class="title">Macbook Air M1 2021</div>
-          <div class="price">23.700.000</div>
+          <a href="#">
+            <div class="img-product">
+              <img src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg" alt="" />
+            </div>
+            <div class="title">Macbook Air M1 2021</div>
+            <div class="price">23.700.000</div>
+          </a>
         </div>
         <div class="product">
-          <div class="img-product">
-            <img src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg" alt="" />
-          </div>
-          <div class="title">Macbook Air M1 2021</div>
-          <div class="price">23.700.000</div>
+          <a href="#">
+            <div class="img-product">
+              <img src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg" alt="" />
+            </div>
+            <div class="title">Macbook Air M1 2021</div>
+            <div class="price">23.700.000</div>
+          </a>
         </div>
         <div class="product">
-          <div class="img-product">
-            <img src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg" alt="" />
-          </div>
-          <div class="title">Macbook Air M1 2021</div>
-          <div class="price">23.700.000</div>
+          <a href="#">
+            <div class="img-product">
+              <img src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg" alt="" />
+            </div>
+            <div class="title">Macbook Air M1 2021</div>
+            <div class="price">23.700.000</div>
+          </a>
         </div>
         <div class="product">
-          <div class="img-product">
-            <img src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg" alt="" />
-          </div>
-          <div class="title">Macbook Air M1 2021</div>
-          <div class="price">23.700.000</div>
+          <a href="#">
+            <div class="img-product">
+              <img src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg" alt="" />
+            </div>
+            <div class="title">Macbook Air M1 2021</div>
+            <div class="price">23.700.000</div>
+          </a>
         </div>
         <div class="product">
-          <div class="img-product">
-            <img src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg" alt="" />
-          </div>
-          <div class="title">Macbook Air M1 2021</div>
-          <div class="price">23.700.000</div>
+          <a href="#">
+            <div class="img-product">
+              <img src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg" alt="" />
+            </div>
+            <div class="title">Macbook Air M1 2021</div>
+            <div class="price">23.700.000</div>
+          </a>
         </div>
+        <div class="product">
+          <a href="#">
+            <div class="img-product">
+              <img src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg" alt="" />
+            </div>
+            <div class="title">Macbook Air M1 2021</div>
+            <div class="price">23.700.000</div>
+          </a>
+        </div>
+        <div class="product">
+          <a href="#">
+            <div class="img-product">
+              <img src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg" alt="" />
+            </div>
+            <div class="title">Macbook Air M1 2021</div>
+            <div class="price">23.700.000</div>
+          </a>
+        </div>
+        <div class="product">
+          <a href="#">
+            <div class="img-product">
+              <img src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg" alt="" />
+            </div>
+            <div class="title">Macbook Air M1 2021</div>
+            <div class="price">23.700.000</div>
+          </a>
+        </div>
+        <div class="product">
+          <a href="#">
+            <div class="img-product">
+              <img src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg" alt="" />
+            </div>
+            <div class="title">Macbook Air M1 2021</div>
+            <div class="price">23.700.000</div>
+          </a>
+        </div>
+        <div class="product">
+          <a href="#">
+            <div class="img-product">
+              <img src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg" alt="" />
+            </div>
+            <div class="title">Macbook Air M1 2021</div>
+            <div class="price">23.700.000</div>
+          </a>
+        </div>
+        <div class="product">
+          <a href="#">
+            <div class="img-product">
+              <img src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg" alt="" />
+            </div>
+            <div class="title">Macbook Air M1 2021</div>
+            <div class="price">23.700.000</div>
+          </a>
+        </div>
+        <div class="product">
+          <a href="#">
+            <div class="img-product">
+              <img src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg" alt="" />
+            </div>
+            <div class="title">Macbook Air M1 2021</div>
+            <div class="price">23.700.000</div>
+          </a>
+        </div>
+        <div class="product">
+          <a href="#">
+            <div class="img-product">
+              <img src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg" alt="" />
+            </div>
+            <div class="title">Macbook Air M1 2021</div>
+            <div class="price">23.700.000</div>
+          </a>
+        </div>
+        <div class="product">
+          <a href="#">
+            <div class="img-product">
+              <img src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg" alt="" />
+            </div>
+            <div class="title">Macbook Air M1 2021</div>
+            <div class="price">23.700.000</div>
+          </a>
+        </div>
+        <div class="product">
+          <a href="#">
+            <div class="img-product">
+              <img src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg" alt="" />
+            </div>
+            <div class="title">Macbook Air M1 2021</div>
+            <div class="price">23.700.000</div>
+          </a>
+        </div>
+        
       </div>
     </div>
   </body>

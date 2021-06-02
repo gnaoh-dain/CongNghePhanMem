@@ -1,26 +1,12 @@
 <?php session_start();?>
 <?php require 'ketnoi.php'; ?>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/main.css" />
-    
-    <title>Document</title>
-  </head>
-  <body>
+
     <!-- Nav -->
     <div class="nav-container">
       <div class="nav">
         <div class="aside-left">
           <div class="logo">
-            <img src="https://static.chotot.com/storage/default/transparent_logo.webp" alt="" />
+            <img src="./images/choOnline.png" alt="" />
           </div>
         </div>
 
@@ -29,7 +15,7 @@
             <a href="./index.php"><i class="ri-home-line"></i> Trang chủ</a>
           </div>
           <div>
-            <a href="./management.html"><i class="ri-group-line"></i> Quản lí tin</a>
+            <a href="#"><i class="ri-group-line"></i> Quản lí tin</a>
           </div>
           <div><i class="ri-more-line"></i> Thêm</div>
         </div>

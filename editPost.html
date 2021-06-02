@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="nav-container">
+      <div class="nav">
+        <div class="aside-left">
+          <div class="logo">
+            <img src="./images/choOnline.png" alt="" />
+          </div>
+        </div>
+
+        <div class="aside-right">
+          <div>
+            <a href="./index.php"><i class="ri-home-line"></i> Trang chủ</a>
+          </div>
+          <div>
+            <a href="./management.html"><i class="ri-group-line"></i> Quản lí tin</a>
+          </div>
+          <div><i class="ri-more-line"></i> Thêm</div>
+        </div>
+
+        <div class="aside-left">
+          <div class="search">
+            <form action="" class="form-search">
+              <span>Search</span>
+              <input type="text" name="search" />
+              <button class="btn" type="submit"><i class="ri-search-line"></i></button>
+            </form>
+          </div>
+        </div>
+        <div class="aside-right">
+          <div><a href="#">Đăng nhập</a></div>
+          <div><a href="#">Upload</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="edit-post-container">
+      <div class="header">Chỉnh sửa sản phẩm</div>
+
+      <div class="edit-post">
+        <form action="" class="info-form">
+          <div class="avatar">
+            <div class="input-img">
+              <label for="inputImg">
+                <img
+                  src="./images/7e2abbc999e1df70f962151002dc1073-2721290836556722572.jpg"
+                  alt=""
+                />
+              </label>
+              <input
+                id="inputImg"
+                type="file"
+                accept="image/*"
+                style="display: none; visibility: hidden"
+                onchange="getImg(this.value)"
+              />
+            </div>
+          </div>
+          <div class="info">
+            <div class="input-wrapper-info">
+              <label for="category">Danh mục</label>
+              <select name="category" id="">
+                <option value="">--- Vui lòng chọn danh mục ---</option>
+                <option value="xe cộ">Xe cộ</option>
+                <option value="máy tính">Máy tính</option>
+                <option value="mỹ phẩm">Mỹ phẩm</option>
+                <option value="điện thoại">Điện thoại</option>
+                <option value="máy ảnh">Máy ảnh - Máy quay phim</option>
+              </select>
+            </div>
+            <div class="input-wrapper-info">
+              <label for="name">Tên sản phẩm</label>
+              <input type="text" name="name" />
+            </div>
+            <div class="input-wrapper-info">
+              <label for="phone">Số điện thoại</label>
+              <input type="text" name="phone" placeholder="" />
+            </div>
+            <div class="input-wrapper-info">
+              <label for="address">Địa chỉ</label>
+              <input type="text" name="address" placeholder="" />
+            </div>
+            <div class="input-wrapper-info">
+              <label for="describe">Mô tả</label>
+              <textarea name="describe" id="" cols="30" rows="10"></textarea>
+            </div>
+            <button type="submit" class="btn-info">Lưu thay đổi</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      function getImg(evt) {
+        var tgt = evt.target || window.event.srcElement,
+          files = tgt.files;
+
+        if (FileReader && files && files.length) {
+          var fr = new FileReader();
+          fr.onload = function () {
+            document.getElementById("avatar").src = fr.result;
+          };
+          fr.readAsDataURL(files[0]);
+        }
+      }
+    </script>
+  </body>
+</html>

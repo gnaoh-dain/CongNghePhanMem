@@ -17,10 +17,9 @@
       <div class="nav">
         <div class="aside-left">
           <div class="logo">
-            <img src="https://static.chotot.com/storage/default/transparent_logo.webp" alt="" />
+            <img src="../images/choOnline.png" alt="" />
           </div>
         </div>
-
         <div class="aside-right">
           <div>
             <a href="http://localhost:85/CongNghePhanMem/index.php"><i class="ri-home-line"></i> Trang chủ</a>
@@ -30,7 +29,6 @@
           </div>
           <div><i class="ri-more-line"></i> Thêm</div>
         </div>
-
         <div class="aside-left">
           <div class="search">
             <form action="" class="form-search">
@@ -46,7 +44,6 @@
         </div>
       </div>
     </div>
-
     <div class="register-container">
       <form class="form-register" action="dangki1.php" method="post" >
         <h1>Đăng ký</h1>
