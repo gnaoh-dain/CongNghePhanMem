@@ -1,4 +1,5 @@
 <?php session_start();?>
+<<<<<<< Updated upstream
 <?php require 'ketnoi.php';
 if(isset($_GET['action'] )){?>
   <!DOCTYPE html>
@@ -85,6 +86,9 @@ else{
     <title>Document</title>
   </head>
   <body>
+=======
+<?php require 'ketnoi.php'; ?>
+>>>>>>> Stashed changes
     <!-- Nav -->
     <div class="nav-container">
       <div class="nav">
