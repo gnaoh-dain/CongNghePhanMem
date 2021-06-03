@@ -1,7 +1,8 @@
-<?php if(!isset($_SESSION['email'])){
+<?php require 'nav.php';
+ if(!isset($_SESSION['email'])){
   header("location:dangki/login.php");
 }else{
-require 'nav.php';
+
 if(isset($_GET['idsp'])){
   $sql = "SELECT * from user where email='". $_SESSION['email']."'";
           $result = mysqli_query($conn,$sql);

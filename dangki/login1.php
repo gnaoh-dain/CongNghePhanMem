@@ -33,7 +33,6 @@ include 'ketnoi.php';
         else{
             if($rows['password'] == ($_POST['pass'])){
                 $_SESSION['email'] = $rows['email'];
-                $_SESSION['level'] = $rows['user_level'];
                 header('location:http://localhost:85/CongNghePhanMem/index.php');
                 }
             else{
