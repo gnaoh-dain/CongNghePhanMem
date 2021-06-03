@@ -27,6 +27,12 @@ a {
   color: black;
 }
 
+.mess-err{
+  margin: 15px 0;
+  display: none;
+  color: #c90927;
+}
+
 .nav-container {
   width: 100%;
   height: 115px;
