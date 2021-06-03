@@ -177,6 +177,7 @@ a {
   margin: auto;
   padding: 5px;
   border: 1px solid black;
+  margin-bottom: 30px;
 }
 
 .category-container > span {
@@ -220,6 +221,8 @@ a {
 .products {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
 }
 
 .header {
@@ -229,7 +232,7 @@ a {
 }
 
 .product > a {
-  margin: 0 10px 5px 0;
+  
   background-color: white;
   border: 1px solid #f4f4f4;
 }
@@ -315,8 +318,6 @@ a {
   width: 450px;
   margin-top: 15px;
 }
-
-
 
 .btn-info {
   margin-top: 15px;
@@ -576,7 +577,7 @@ textarea {
   margin-bottom: 30px;
 }
 
-.post:hover{
+.post:hover {
   cursor: pointer;
   box-shadow: 0 1px 7px 0 rgb(0 0 0 / 30%);
 }
@@ -617,7 +618,7 @@ textarea {
 }
 
 /* Edit Post */
-.edit-post-container{
+.edit-post-container {
   width: 60%;
   margin: auto;
 }

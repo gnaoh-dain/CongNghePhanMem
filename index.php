@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/main.css" />
-    
-    <title>Document</title>
-  </head>
-  <body>
+
 <?php
 require 'nav.php'; ?>
     <div class="category-container">
@@ -45,7 +31,7 @@ require 'nav.php'; ?>
         <a href="search.php?search=xeco">
         <div class="detail-category">
           <div class="img-category">
-            <img src="./images/978b9e4cb61c611aaaf58664fae133c5_tn.png" alt="" />
+            <img src="./images/3fb459e3449905545701b418e8220334_tn.png" alt="" />
           </div>
           <div class="title">Xe Cộ</div>
         </div>
@@ -62,6 +48,7 @@ require 'nav.php'; ?>
     </div>
     <div class="product-container">
     <div class="header">Tin đăng dành cho bạn</div>
+    <div class="products">
     <?php
     $sql = "SELECT COUNT(idsp) as total FROM sanpham";
     $resultt = mysqli_query($conn,$sql);
@@ -77,7 +64,6 @@ require 'nav.php'; ?>
      $resulti = mysqli_query($conn,$sqli);}
     while ($rows = mysqli_fetch_assoc($resulti)){
      ?>
-      <div class="products">
         <div class="product">
           <a href="detail.php?id=<?php echo $rows['idsp']?>">
             <div class="img-product">
@@ -87,8 +73,8 @@ require 'nav.php'; ?>
             <div class="price"><?php echo $rows['giatien'] ?></div>
           </a>
         </div>
+        <?php } ?>
       </div>
-      <?php } ?>
     </div>
     
   </body>
