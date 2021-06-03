@@ -34,9 +34,11 @@ if($rows>0){
 }else{
     //tao tai khoan
     $a = rand(10000,99999);
-    $sql = "INSERT into user(iduser,email,name,phone,address,password,status,code) values(null,'" . $_POST['email'] . "','" .$_POST['userName'] . "',0,'haha','". $_POST['password']."',0,$a)";
+    $sql = "INSERT into user(iduser,email,name,phone,address,password,status,code) values(null,'" . $_POST['email'] . "','" .$_POST['userName'] . "',0,'No Address','". $_POST['password']."',0,$a)";
     $result = mysqli_query($conn,$sql);
+    
     if(!$result){
+      echo("Error description: " . mysqli_error($conn));
       die('chua them duoc');
     }
     else{

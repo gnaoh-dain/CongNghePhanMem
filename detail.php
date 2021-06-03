@@ -10,7 +10,12 @@
       <div class="content">
         <div class="detail-aside-left">
           <div class="detail-img">
-          <?php echo'<img src="data:avatar;base64,'.base64_encode($row['photo']).'"alt="">'; ?>
+          <?php if($row['photo'] == null){
+             echo '<img src="images/20653430.png"alt="">';
+          }else{
+             echo'<img src="data:avatar;base64,'.base64_encode($row['photo']).'"alt="">';
+          }
+          ?>
           </div>
           <div class="detail-title"><?php echo $row['tensp'] ?></div>
           <div class="nm1">
@@ -33,7 +38,11 @@
         <div class="detail-aside-right">
           <div class="saller-info">
             <div class="img-saller">
-            <?php echo'<img src="data:avatar;base64,'.base64_encode($rowi['photo']).'"alt="">'; ?>
+            <?php if($row['photo'] == ''){
+             echo '<img src="images/20653430.png"alt="">';
+          }else{
+             echo'<img src="data:avatar;base64,'.base64_encode($rowi['photo']).'"alt="">';
+          }?>
             </div>
             <div class="name-saller"><?php echo $rowi['name'] ?></div>
           </div>
