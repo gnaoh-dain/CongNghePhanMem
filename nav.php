@@ -50,15 +50,21 @@
           ?>
           
           <!-- <div><i class="ri-more-line"></i> Thêm</div> -->
-
+          <?php  if(isset($_SESSION['email'])){ ?>
             <ul class="list-dropdown">
-              <li><a href="#"><i class="ri-more-line"></i> Thêm</a>
+            <li><a href="#"><i class="ri-more-line"></i> Thêm</a> 
             <ul class="dropdown">
               <li><a href="archive.php">Tin đã lưu</a></li>
               <li><a href="logout.php">Đăng xuất</a></li>
             </ul>
               </li>
-            </ul>
+              </ul>
+            
+            <?php }else{?> <ul class="list-dropdown">
+              <li><a href="dangki/login.php"><i class="ri-more-line"></i> Thêm</a>
+              </li>
+               </ul>
+            <?php } ?>
 
         </div>
 
