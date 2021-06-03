@@ -33,7 +33,7 @@ include 'ketnoi.php';
         else{
             if($rows['password'] == ($_POST['pass'])){
                 $_SESSION['email'] = $rows['email'];
-                header('location:index.php');
+                header('location:http://localhost/CongNghePhanMem/index.php');
                 }
             else{
                 echo '<H3 style ="text-align : center">Sai Password !</H3>';

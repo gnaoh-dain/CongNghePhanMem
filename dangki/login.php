@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<?php require('nav.php') ?>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -21,7 +22,7 @@
         </div>
         <div class="aside-right">
           <div>
-            <a href="index.php"><i class="ri-home-line"></i> Trang chủ</a>
+            <a href="localhost:80/CongNghePhanMem/index.php"><i class="ri-home-line"></i> Trang chủ</a>
           </div>
           <div>
             <a href="./management.html"><i class="ri-group-line"></i> Quản lí tin</a>
@@ -42,7 +43,7 @@
           <div><a href="login.php">Đăng Tin</a></div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="login-container">
       <form class="form-login" action="login1.php" method="POST">
         <h1>Đăng nhập</h1>

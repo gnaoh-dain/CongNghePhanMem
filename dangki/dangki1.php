@@ -34,7 +34,7 @@ if($rows>0){
 }else{
     //tao tai khoan
     $a = rand(10000,99999);
-    $sql = "INSERT into user(iduser,photo,email,name,phone,address,password,status,code) values(null,0,'" . $_POST['email'] . "','" .$_POST['userName'] . "',0,'No Address','". $_POST['password']."',0,$a)";
+    $sql = "INSERT into user(iduser,photo,email,name,phone,address,password,status,code) values(null,0,'" . $_POST['email'] . "','" .$_POST['userName'] . "','Chưa cập nhật','Chưa cập nhật','". $_POST['password']."',0,$a)";
     $result = mysqli_query($conn,$sql);
     
     if(!$result){
