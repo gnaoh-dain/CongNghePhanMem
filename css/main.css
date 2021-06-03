@@ -106,6 +106,53 @@ a {
   cursor: pointer;
 }
 
+.list-dropdown {
+  position: relative;
+}
+
+ul,
+li {
+  display: block;
+}
+
+ul li {
+  list-style: none;
+}
+
+.dropdown {
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+  z-index: 11;
+  background-color: #f4f4f4;
+  box-shadow: 0 1px 7px 0 rgb(0 0 0 / 30%);
+}
+
+.dropdown li {
+  width: 150px;
+  padding: 10px;
+  text-align: center;
+}
+
+.dropdown a {
+  width: 150px;
+}
+
+.list-dropdown:hover .dropdown {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+.dropdown li:hover a {
+  color: #ffba00;
+  cursor: pointer;
+}
+
 /* Register */
 .register-container {
   width: 80%;
@@ -232,7 +279,6 @@ a {
 }
 
 .product > a {
-  
   background-color: white;
   border: 1px solid #f4f4f4;
 }

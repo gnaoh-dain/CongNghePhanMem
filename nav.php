@@ -20,7 +20,9 @@
       <div class="nav">
         <div class="aside-left">
           <div class="logo">
+            <a href="./index.php">
             <img src="./images/choOnline.png" alt="" />
+            </a>
           </div>
         </div>
 
@@ -29,25 +31,35 @@
             <a href="./index.php"><i class="ri-home-line"></i> Trang chủ</a>
           </div>
           <?php 
-        if(!isset($_SESSION['email'])){
+          if(!isset($_SESSION['email'])){
           ?>
           <div>
             <a href="./dangki/login.php"><i class="ri-group-line"></i> Quản lí tin</a>
           </div>
           <?php
-        }else{
+          }else{
           $sql = "SELECT * from user where email='". $_SESSION['email']."'";
           $result = mysqli_query($conn,$sql);
          $row = $result->fetch_assoc();
           ?>
-        <div>
+          <div>
             <a href="post.php"><i class="ri-group-line"></i> Quản lí tin</a>
           </div>
-       <?php 
-        }
-        ?>
+          <?php 
+          }
+          ?>
           
-          <div><i class="ri-more-line"></i> Thêm</div>
+          <!-- <div><i class="ri-more-line"></i> Thêm</div> -->
+
+            <ul class="list-dropdown">
+              <li><a href="#"><i class="ri-more-line"></i> Thêm</a>
+            <ul class="dropdown">
+              <li><a href="#">Tin đã lưu</a></li>
+              <li><a href="#">Đăng xuất</a></li>
+            </ul>
+              </li>
+            </ul>
+
         </div>
 
         <div class="aside-left">
