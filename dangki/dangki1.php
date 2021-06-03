@@ -67,7 +67,7 @@ if($rows>0){
         </head>
         <body>
           <form action="dangki1.php?id=<?php echo $_POST['email'];?>" method = "post">
-            <h1>Nhập mã xác thự được gửi tới email của bạn : </h1>
+            <h1>Nhập mã xác thực được gửi tới email của bạn : </h1>
             <input type="text" name ="ma" value = "">
             <input type="submit" value="xac nhan">
           </form>

@@ -54,8 +54,8 @@
             <ul class="list-dropdown">
               <li><a href="#"><i class="ri-more-line"></i> Thêm</a>
             <ul class="dropdown">
-              <li><a href="#">Tin đã lưu</a></li>
-              <li><a href="#">Đăng xuất</a></li>
+              <li><a href="archive.php">Tin đã lưu</a></li>
+              <li><a href="logout.php">Đăng xuất</a></li>
             </ul>
               </li>
             </ul>
