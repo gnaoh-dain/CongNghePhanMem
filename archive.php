@@ -14,12 +14,12 @@ else {
       <div class="header">Tin đã lưu</div>
       <div class="search-product">
         <?php
-        $sql = "SELECT sanpham.photo,sanpham.tensp,sanpham.giatien,sanpham.addressproduct from user,sanpham,luutin where user.iduser = luutin.iduser AND luutin.idsp = sanpham.idsp AND email='". $_SESSION['email']."'";
+        $sql = "SELECT sanpham.idsp,sanpham.photo,sanpham.tensp,sanpham.giatien,sanpham.addressproduct from user,sanpham,luutin where user.iduser = luutin.iduser AND luutin.idsp = sanpham.idsp AND email='". $_SESSION['email']."'";
         $result = mysqli_query($conn,$sql);
         while ($rowi = mysqli_fetch_assoc($result)){
          ?>
         <div class="search-result">
-          <a href="#">
+          <a href="detail.php?id=<?php echo $rowi['idsp']?>">
             <div class="image-product">
             <?php echo'<img src="data:avatar;base64,'.base64_encode($rowi['photo']).'"alt="">'; ?>
             </div>
