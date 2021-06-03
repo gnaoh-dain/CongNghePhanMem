@@ -22,5 +22,5 @@ $row = $result->fetch_assoc();
 $b = addslashes(file_get_contents($_FILES['avatar']['tmp_name']));
 $sqli = "INSERT INTO sanpham(idsp,idloaisp,tensp,photo,Mota,giatien,addressproduct,iduser) VALUES (null,$a,'" . $_POST['name'] . "','" . $b . "','" . $_POST['describe'] . "','" . $_POST['price'] . "','haha','" . $row['iduser'] . "')";
 $resulti = mysqli_query($conn,$sqli);
-header('location:http://localhost:85/CongNghePhanMem/post.php');
+header('location:post.php');
 ?>
