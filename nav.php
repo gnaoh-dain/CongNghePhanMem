@@ -70,7 +70,7 @@
         }else{
           $sql = "SELECT * from user where email='". $_SESSION['email']."'";
           $result = mysqli_query($conn,$sql);
-         $row = $result->fetch_assoc();
+          $row = $result->fetch_assoc();
           ?>
          <div><a href="user.php"><?php echo $row["name"] ?></a></div>
           <div><a href="uploadProduct.php">Đăng Tin</a></div>
