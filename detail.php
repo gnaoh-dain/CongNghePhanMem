@@ -38,11 +38,11 @@
         <div class="detail-aside-right">
           <div class="saller-info">
             <div class="img-saller">
-            <?php if($row['photo'] == ''){
-             echo '<img src="images/20653430.png"alt="">';
-          }else{
+            <?php if($rowi['photo'] == 0){
+             echo '<img src="images/20653430.png" alt="" />';
+            }else{
              echo'<img src="data:avatar;base64,'.base64_encode($rowi['photo']).'"alt="">';
-          }?>
+            }?>
             </div>
             <div class="name-saller"><?php echo $rowi['name'] ?></div>
           </div>
