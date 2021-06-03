@@ -60,10 +60,15 @@
               </li>
               </ul>
             
-            <?php }else{?> <ul class="list-dropdown">
-              <li><a href="dangki/login.php"><i class="ri-more-line"></i> Thêm</a>
+            <?php }else{?>  <ul class="list-dropdown">
+            <li><a href="#"><i class="ri-more-line"></i> Thêm</a> 
+            <ul class="dropdown">
+              <li><a href="archive.php">Tin đã lưu</a></li>
+              <li><a href="dangki/login.php">Đăng Nhập</a></li>
+            </ul>
               </li>
-               </ul>
+              </ul>
+            
             <?php } ?>
 
         </div>
