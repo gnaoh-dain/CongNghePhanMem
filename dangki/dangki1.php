@@ -25,10 +25,7 @@ if(isset($_GET['id'])){
 else {
   require 'ketnoi.php';
   //kiem tra email trung khong
-  if(isset($_POST['email'])&& !empty($_POST['email']) && isset($_POST['password']) && !empty($_POST['password']) && isset($_POST['confirmPassword']) && !empty($_POST['confirmPassword']) && isset($_POST['userName'])&& !empty($_POST['userName'])){
-
-
-
+  if(isset($_POST['email'])&& !empty($_POST['email']) && isset($_POST['password']) && !empty($_POST['password']) && isset($_POST['confirmPassword']) && !empty($_POST['confirmPassword']) && isset($_POST['userName'])&& !empty($_POST['userName']) && $_POST['password'] == $_POST['confirmPassword']){
 
   $sqli = "SELECT * from user where email = '" . $_POST['email'] . "' ";
   $resulti = mysqli_query($conn,$sqli);
@@ -151,7 +148,7 @@ else {
           <input type="password" name="confirmPassword" placeholder="Nhập lại password của bạn" />
         </div>
         <div class="mess-err" style="display: block;">
-          Bạn cần điền đầy đủ thông tin!
+          Bạn cần điền đầy đủ và chính xác thông tin!
         </div>
         <div class="submit">
           <button type="submit">Đăng ký</button>

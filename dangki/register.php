@@ -15,7 +15,7 @@
           <input type="password" name="confirmPassword" placeholder="Nhập lại password của bạn" />
         </div>
         <div class="mess-err">
-          Bạn cần điền đầy đủ thông tin!
+          Bạn cần điền đầy đủ và chính xác thông tin!
         </div>
         <div class="submit">
           <button type="submit">Đăng ký</button>
