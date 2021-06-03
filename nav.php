@@ -20,7 +20,7 @@
       <div class="nav">
         <div class="aside-left">
           <div class="logo">
-            <img src="https://static.chotot.com/storage/default/transparent_logo.webp" alt="" />
+            <img src="./images/choOnline.png" alt="" />
           </div>
         </div>
 
