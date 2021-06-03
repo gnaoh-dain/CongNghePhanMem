@@ -15,7 +15,9 @@
           <div class="detail-title"><?php echo $row['tensp'] ?></div>
           <div class="nm1">
             <div class="detail-price"><?php echo $row['giatien'] ?><span>đ</span></div>
+            <a href="archive.php?idsp=<?php echo $row['idsp'] ?>">
             <div class="save-product"><span> Lưu tin </span> <i class="ri-heart-line"></i></div>
+          </a>
           </div>
           <div class="describe">
             <span>Mô tả sản phẩm: </span>
@@ -24,7 +26,7 @@
           <div class="detail-address"><span>Địa chỉ: </span> <?php echo $row['addressproduct'] ?></div>
         </div>
         <?php require 'ketnoi.php';
-                  $sqlii = "SELECT user.name,user.phone,user.photo FROM user,sanpham Where user.iduser = sanpham.iduser AND idsp = '".$_GET['id']."' ";
+                  $sqlii = "SELECT user.name,user.phone,user.photo,user.iduser FROM user,sanpham Where user.iduser = sanpham.iduser AND idsp = '".$_GET['id']."' ";
                   $resultii = mysqli_query($conn,$sqlii);
                   $rowi = $resultii->fetch_assoc();
             ?>
@@ -33,7 +35,6 @@
             <div class="img-saller">
             <?php echo'<img src="data:avatar;base64,'.base64_encode($rowi['photo']).'"alt="">'; ?>
             </div>
-            
             <div class="name-saller"><?php echo $rowi['name'] ?></div>
           </div>
           <div class="phoneNumber"><span>Số điện thoại:</span><?php echo $rowi['phone'] ?> </div>
