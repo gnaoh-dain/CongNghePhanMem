@@ -5,7 +5,7 @@ if(isset($_GET['id'])){
    $result = mysqli_query($conn,$sql);
    $rows = mysqli_fetch_assoc($result);
    if ($rows['code'] == $_POST['ma']){
-     echo '<h3 style ="text-align : center">Đăng Ký Thành Công !</h3>';
+     echo '<script>alert("Đăng ký thành công!")</script>';
      require 'ketnoi.php';
      $sqlii = "UPDATE user set status = 1 where email = '" . $_GET['id'] . "'";
      $resultii = mysqli_query($conn,$sqlii);
@@ -29,7 +29,7 @@ $sqli = "SELECT * from user where email = '" . $_POST['email'] . "' ";
 $resulti = mysqli_query($conn,$sqli);
 $rows = mysqli_num_rows($resulti);
 if($rows>0){
-  echo '<H3>Email đã tồn tại</H3>';
+  echo '<script>alert("Email đã tồn tại!")</script>';
   require 'register.php';
 }else{
     //tao tai khoan
