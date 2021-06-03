@@ -17,10 +17,15 @@
 require 'nav.php';
 require 'ketnoi.php';
 if(isset($_GET['action'])){
-  $a = addslashes(file_get_contents($_FILES['avatar']['tmp_name']));
- $sql = "UPDATE user SET name = '".$_POST['name']."',email = '".$_POST['email']."',phone = '".$_POST['phone']."',address = '".$_POST['address']."',password = '".$_POST['password']."',photo = '".$a."' WHERE  iduser = '". $_GET['action'] ."'";
+  if(isset($_FILES['avatar'])){
+    $a = addslashes(file_get_contents($_FILES['avatar']['tmp_name']));
+    $sql = "UPDATE user SET name = '".$_POST['name']."',email = '".$_POST['email']."',phone = '".$_POST['phone']."',address = '".$_POST['address']."',password = '".$_POST['password']."',photo = '".$a."' WHERE  iduser = '". $_GET['action'] ."'";
+  }else {
+    $sql = "UPDATE user SET name = '".$_POST['name']."',email = '".$_POST['email']."',phone = '".$_POST['phone']."',address = '".$_POST['address']."',password = '".$_POST['password']."' WHERE  iduser = '". $_GET['action'] ."'";
+
+  }
  $result = mysqli_query($conn,$sql);
-header('location:user.php');
+header('location:index.php');
 }
 else{
 $sql = "SELECT * from user where email='". $_SESSION['email']."'";
@@ -37,7 +42,11 @@ if(!empty($row)){
           <div class="input-img">
             <label for="inputImg">
             <div>
-               <?php echo'<img id="avatar" src="data:avatar;base64,'.base64_encode($row['photo']).'"alt="Thay đổi ảnh đại diện">'; ?>
+            <?php if($row['photo'] == 0){
+             echo '<img id="avatar" src="images/20653430.png" alt="" />';
+            }else{
+              echo'<img id="avatar" src="data:avatar;base64,'.base64_encode($row['photo']).'"alt="Thay đổi ảnh đại diện">';
+            }?>
            </div>
             </label>
             <input

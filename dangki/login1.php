@@ -17,7 +17,7 @@ include 'ketnoi.php';
         <body>
         <div>
             <div>
-            <H3 style ="text-align : center">Sai Email !</H3>
+            <H3 style ="text-align : center; ">Sai Email !</H3>
             </div>
             </div>
         </body>
