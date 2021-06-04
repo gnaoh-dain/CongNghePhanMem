@@ -1,5 +1,4 @@
 <?php
-  session_start();
   require 'ketnoi.php';?>
 <!DOCTYPE html>
 <html lang="en">
