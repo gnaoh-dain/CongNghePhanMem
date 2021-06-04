@@ -16,12 +16,12 @@ else{
 }
 session_start();
 require 'ketnoi.php';
-if(isset($_POST["avatar"]) && isset($_POST['category']) && $_POST['category'] != '' && isset($_POST['address']) && !empty($_POST['address'])&& isset($_POST['name']) && !empty($_POST['name']) && isset($_POST['price']) && !empty($_POST['price']) && isset($_POST['describe']) && !empty($_POST['describe'])){
+if( isset($_POST['category']) && $_POST['category'] != '' && isset($_POST['address']) && !empty($_POST['address'])&& isset($_POST['name']) && !empty($_POST['name']) && isset($_POST['price']) && !empty($_POST['price']) && isset($_POST['describe']) && !empty($_POST['describe'])){
   $sql = "SELECT * from user where email='".$_SESSION['email']."'";
   $result = mysqli_query($conn,$sql);
   $row = $result->fetch_assoc();
   $b = addslashes(file_get_contents($_FILES['avatar']['tmp_name']));
-  $sqli = "INSERT INTO sanpham(idsp,idloaisp,tensp,photo,Mota,giatien,addressproduct,iduser) VALUES (null,$a,'" . $_POST['name'] . "','" . $b . "','" . $_POST['describe'] . "','" . $_POST['price'] . "','haha','" . $row['iduser'] . "')";
+  $sqli = "INSERT INTO sanpham(idsp,idloaisp,tensp,photo,Mota,giatien,addressproduct,iduser) VALUES (null,$a,'" . $_POST['name'] . "','" . $b . "','" . $_POST['describe'] . "','" . $_POST['price'] . "','" . $_POST['address'] . "','" . $row['iduser'] . "')";
   $resulti = mysqli_query($conn,$sqli);
   header('location:post.php');
 
