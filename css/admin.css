@@ -1,0 +1,266 @@
+*:focus {
+  outline: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: auto;
+  background-color: #f4f4f498;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.mess-err {
+  margin: 15px 0;
+  display: none;
+  color: #c90927;
+}
+
+/* Admin */
+
+.login-admin-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #d2d6de;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-login-admin {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  padding: 15px;
+  background-color: white;
+  box-shadow: 0 1px 7px 0 rgb(0 0 0 / 30%);
+  height: 320px;
+}
+
+.form-login-admin input {
+  margin-bottom: 15px;
+  height: 34px;
+  /* width: 100%; */
+
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+}
+
+.form-login-admin h3 {
+  text-align: center;
+}
+
+.form-login-admin label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.submit-btn {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.submit-btn button {
+  background-color: #ffba00;
+  border-color: #ffba00;
+  padding: 10px 20px;
+  border: none;
+}
+
+.submit-btn > button > a {
+  color: #f4f4f4;
+}
+
+/* user-management */
+.nav-admin {
+  width: 100%;
+  background-color: #ffba00;
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 160px;
+  height: 60px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-admin > div {
+  display: flex;
+  width: 60%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logout {
+  color: white;
+  font-size: 18px;
+}
+
+.logout:hover {
+  cursor: pointer;
+}
+
+.manage-container {
+  width: 80%;
+  margin: auto;
+}
+
+.table {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  border-bottom: 1px solid #b7b7b7;
+  padding: 15px 10px;
+  gap: 0px 20px;
+}
+
+.table div,
+.table-user div {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.product {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin-bottom: 30px;
+  padding: 15px 10px;
+  border-bottom: 1px solid #b7b7b7;
+  gap: 0px 20px;
+}
+
+.img {
+  width: 100px;
+}
+
+.img img {
+  width: 100%;
+}
+
+.accept {
+  padding: 5px 15px;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  border: 1px solid transparent;
+  margin-right: 15px;
+}
+
+.refuse {
+  padding: 5px 15px;
+  background-color: #dd4b39;
+  border-color: #d73925;
+  border: 1px solid transparent;
+}
+
+.product > .check a {
+  color: white;
+}
+
+.list-dropdown {
+  position: relative;
+}
+
+ul,
+li {
+  display: block;
+}
+
+ul li {
+  list-style: none;
+}
+
+.dropdown {
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+  z-index: 11;
+  background-color: #f4f4f4;
+  box-shadow: 0 1px 7px 0 rgb(0 0 0 / 30%);
+}
+
+.dropdown li {
+  width: 150px;
+  padding: 10px;
+  text-align: left;
+}
+
+.dropdown a {
+  width: 150px;
+}
+
+.list-dropdown:hover .dropdown {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+.dropdown li:hover a {
+  color: #ffba00;
+  cursor: pointer;
+}
+
+.users-container {
+  width: 80%;
+  margin: auto;
+}
+
+.table-user {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 1px solid #b7b7b7;
+  padding: 15px 10px;
+  gap: 0px 20px;
+  margin-bottom: 30px;
+}
+
+.user {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 30px;
+  padding: 15px 10px;
+  border-bottom: 1px solid #b7b7b7;
+  gap: 0px 20px;
+}
+
+.action button{
+    padding: 5px 15px;
+  background-color: #dd4b39;
+  border-color: #d73925;
+  border: 1px solid transparent;
+}
+
+.action > button > a{
+    color: white;
+}

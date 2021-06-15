@@ -94,6 +94,12 @@ a {
   margin-right: 0;
 }
 
+.search {
+  background-color: white;
+  border-radius: 10px;
+  position: absolute;
+}
+
 .aside-left button {
   position: relative;
   right: 10px;
@@ -687,4 +693,81 @@ textarea {
 .edit-post-container {
   width: 60%;
   margin: auto;
+}
+
+/* Chat */
+
+.chat-container{
+  width: 80%;
+  height: 100vh;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+.aside-left-chat {
+  width: 100%;
+  background-color: violet;
+}
+
+.aside-right-chat{
+  position: relative;
+  padding: 5px;
+}
+
+.input{
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.input input{
+  width: 100%;
+  height: 38px;
+}
+
+
+
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.time-left {
+  float: left;
+  color: #999;
 }

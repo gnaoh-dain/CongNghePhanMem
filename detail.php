@@ -47,7 +47,7 @@
             <div class="name-saller"><?php echo $rowi['name'] ?></div>
           </div>
           <div class="phoneNumber"><span>Số điện thoại:</span><?php echo $rowi['phone'] ?> </div>
-          <a href="#">
+          <a href="chat.html">
               <button class="btn-chat"><i class="ri-wechat-line"></i>Chat với người bán</button>
           </a>
         </div>

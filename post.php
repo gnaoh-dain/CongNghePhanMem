@@ -5,7 +5,8 @@
       <?php $sql = "SELECT * from user where email='".$_SESSION['email']."'";
             $result = mysqli_query($conn,$sql);
             $row = $result->fetch_assoc();
-            $sqli = "SELECT * from sanpham where iduser = '".$row['iduser']."'";
+            $sqli = "SELECT * from sanpham where iduser = '".$row['iduser']."' order by idsp ASC";
+
             $resulti = mysqli_query($conn,$sqli);
             while ($rowi = mysqli_fetch_assoc($resulti)){
       ?>
