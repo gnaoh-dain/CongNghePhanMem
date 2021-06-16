@@ -55,12 +55,12 @@ require 'nav.php'; ?>
     $rowt = mysqli_fetch_assoc($resultt);
     $total_records = $rowt['total'];   
     if($total_records <= 10){
-    $sqli = "SELECT * FROM sanpham ";
+    $sqli = "SELECT * FROM sanpham where level = 2 ";
     $resulti = mysqli_query($conn,$sqli);
     }
     else{
      $c = $total_records - 9;
-     $sqli = "SELECT * FROM sanpham LIKE $c,$total_records ";
+     $sqli = "SELECT * FROM sanpham LIKE $c,$total_records AND level = 2 ";
      $resulti = mysqli_query($conn,$sqli);}
     while ($rows = mysqli_fetch_assoc($resulti)){
      ?>

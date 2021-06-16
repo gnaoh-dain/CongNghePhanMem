@@ -25,7 +25,12 @@ if($_GET['function'] =="delete"){
   $sql = "DELETE FROM `sanpham` WHERE idsp = '".$_GET['id']."' ";
   $resu = mysqli_query($conn,$sql);
   header('location:post.php');
-}else{
+}elseif($_GET['function'] =="post"){
+  $sql = "UPDATE sanpham set level = 0  where idsp = '" . $_GET['id'] . "'";
+  $resu = mysqli_query($conn,$sql);
+  header('location:post.php');
+}
+else{
 ?>
     <div class="edit-post-container">
       <div class="header">Chỉnh sửa sản phẩm</div>
