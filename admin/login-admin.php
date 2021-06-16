@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,15 +14,15 @@
   </head>
   <body>
       <div class="login-admin-container">
-        <form action="" class="form-login-admin">
+        <form action="login11.php" class="form-login-admin" method = "POST">
             <h3>Login</h3>
             <label for="email">Email</label>
             <input type="email" name="email" placeholder="Email">
             <label for="password">Password</label>
-            <input type="password" name="password" placeholder="Password">
+            <input type="password" name="pass" placeholder="Password">
             <div class="mess-err">Sai thông tin đăng nhập</div>
             <div class="submit-btn">
-                <button type="submit"><a href="#">Login</a></button>
+                <button type="submit">Login</button>
             </div>
         </form>
       </div>

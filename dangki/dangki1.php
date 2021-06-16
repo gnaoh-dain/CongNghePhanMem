@@ -36,9 +36,8 @@ else {
   }else{
       //tao tai khoan
       $a = rand(10000,99999);
-      $sql = "INSERT into user(iduser,photo,email,name,phone,address,password,status,code) values(null,0,'" . $_POST['email'] . "','" .$_POST['userName'] . "','Chưa cập nhật','Chưa cập nhật','". $_POST['password']."',0,$a)";
+      $sql = "INSERT into user(iduser,photo,email,name,phone,address,password,status,code,level) values(null,0,'" . $_POST['email'] . "','" .$_POST['userName'] . "','Chưa cập nhật','Chưa cập nhật','". $_POST['password']."',0,$a,1)";
       $result = mysqli_query($conn,$sql);
-      
       if(!$result){
         echo("Error description: " . mysqli_error($conn));
         die('chua them duoc');
