@@ -27,13 +27,13 @@
 
         <div class="aside-right">
           <div>
-            <a href="http://localhost:80/CongNghePhanMem/index.php"><i class="ri-home-line"></i> Trang chủ</a>
+            <a href="http://localhost:81/CongNghePhanMem/index.php"><i class="ri-home-line"></i> Trang chủ</a>
           </div>
           <?php 
           if(!isset($_SESSION['email'])){
           ?>
           <div>
-            <a href="http://localhost:80/CongNghePhanMem/dangki/login.php"><i class="ri-group-line"></i> Quản lí tin</a>
+            <a href="http://localhost:81/CongNghePhanMem/dangki/login.php"><i class="ri-group-line"></i> Quản lí tin</a>
           </div>
           <?php
           }else{
@@ -42,7 +42,7 @@
          $row = $result->fetch_assoc();
           ?>
           <div>
-            <a href="http://localhost:80/CongNghePhanMem/post.php"><i class="ri-group-line"></i> Quản lí tin</a>
+            <a href="http://localhost:81/CongNghePhanMem/post.php"><i class="ri-group-line"></i> Quản lí tin</a>
           </div>
           <?php 
           }
@@ -63,7 +63,7 @@
             <li><a href="#"><i class="ri-more-line"></i> Thêm</a> 
             <ul class="dropdown">
               <li><a href="archive.php">Tin đã lưu</a></li>
-              <li><a href="http://localhost:80/CongNghePhanMem/dangki/login.php">Đăng Nhập</a></li>
+              <li><a href="http://localhost:81/CongNghePhanMem/dangki/login.php">Đăng Nhập</a></li>
             </ul>
               </li>
               </ul>
@@ -86,16 +86,16 @@
           <?php 
         if(!isset($_SESSION['email'])){
           ?>
-          <div><a href="http://localhost:80/CongNghePhanMem/dangki/login.php">Đăng nhập</a></div>
-          <div><a href="http://localhost:80/CongNghePhanMem/dangki/login.php">Đăng Tin</a></div>
+          <div><a href="http://localhost:81/CongNghePhanMem/dangki/login.php">Đăng nhập</a></div>
+          <div><a href="http://localhost:81/CongNghePhanMem/dangki/login.php">Đăng Tin</a></div>
           <?php
         }else{
           $sql = "SELECT * from user where email='". $_SESSION['email']."'";
           $result = mysqli_query($conn,$sql);
           $row = $result->fetch_assoc();
           ?>
-         <div><a href="http://localhost:80/CongNghePhanMem/user.php"><?php echo $row["name"] ?></a></div>
-          <div><a href="http://localhost:80/CongNghePhanMem/uploadProduct.php">Đăng Tin</a></div>
+         <div><a href="http://localhost:81/CongNghePhanMem/user.php"><?php echo $row["name"] ?></a></div>
+          <div><a href="http://localhost:81/CongNghePhanMem/uploadProduct.php">Đăng Tin</a></div>
        <?php 
         }
         ?>

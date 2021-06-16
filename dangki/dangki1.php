@@ -110,7 +110,7 @@ else {
         </div>
         <div class="aside-right">
           <div>
-            <a href="localhost:80/CongNghePhanMem/index.php"><i class="ri-home-line"></i> Trang chủ</a>
+            <a href="localhost:81/CongNghePhanMem/index.php"><i class="ri-home-line"></i> Trang chủ</a>
           </div>
           <div>
             <a href="./management.html"><i class="ri-group-line"></i> Quản lí tin</a>

@@ -58,7 +58,7 @@ include 'ketnoi.php';
         else{
             if($rows['password'] == ($_POST['pass'])){
                 $_SESSION['email'] = $rows['email'];
-                header('location:http://localhost/CongNghePhanMem/index.php');
+                header('location:http://localhost:81/CongNghePhanMem/index.php');
                 }
             else{
                 echo '<script>alert("Bạn nhập sai password!")</script>';
