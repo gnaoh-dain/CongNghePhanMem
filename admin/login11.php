@@ -16,7 +16,6 @@ include 'ketnoi.php';
 
           if($rows['password'] == ($_POST['pass'])){
             $_SESSION['email'] = $rows['email'];
-           
             header('location:http://localhost:81/CongNghePhanMem/admin/product-management.php');
             }
         else{

@@ -15,6 +15,7 @@
         <div class="submit">
           <button type="submit">Đăng Nhập</button>
           <div>Bạn chưa có tài khoản? <a href="./register.php">Đăng ký</a></div>
+          <div> <a href="forgot_pass.php"> Quên mật khẩu ?</a></div>
         </div>
       </form>
     </div>
