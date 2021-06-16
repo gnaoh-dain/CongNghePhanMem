@@ -37,7 +37,7 @@ if(isset($_GET['id'])){
         </ul>
       </div>
     </div><?php 
-  $sql = "SELECT * from sanpham where level = 0";
+  $sql = "SELECT * from sanpham where level = 0 AND idsp = '".$_GET['idsp']."'";
       $result = mysqli_query($conn,$sql);
       if(mysqli_num_rows($result) > 0){
         while ($row = mysqli_fetch_assoc($result)){
