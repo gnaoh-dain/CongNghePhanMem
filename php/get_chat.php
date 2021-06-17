@@ -26,7 +26,6 @@ if (isset($_SESSION['iduser'])) {
             } else {
                 $output .= '
                 <div class="chat incoming">
-                 <img src="data:avatar;base64,'.base64_encode($row['photo']).'"alt="">
                     <div class="details">
                         <p>'.$row['msg'].'</p>
                     </div>

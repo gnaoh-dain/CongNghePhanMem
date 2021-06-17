@@ -1,41 +1,120 @@
 <?php 
     require 'nav.php';
-?>
-    <div class="chat-container">
-        <div class="aside-left-chat">
+    if(!isset($_GET['user_id'])){?>
+        <div class="chat-container">
+         <div class="aside-left-chat">
+        <?php
+        $sql = "SELECT DISTINCT idsp,outgoing_msg_id FROM messages WHERE incoming_msg_id = '".$_SESSION['iduser']."' OR outgoing_msg_id = '".$_SESSION['iduser']."' ORDER BY idsp,outgoing_msg_id";
+        $result = mysqli_query($conn,$sql);
+        if(mysqli_num_rows($result) > 0){
+        while ($row = mysqli_fetch_assoc($result)){
+            if($row['outgoing_msg_id'] == $_SESSION['iduser']){
+            $sql1 = "SELECT user.iduser,sanpham.idsp,user.name,user.photo,sanpham.tensp,sanpham.photo AS photo1 FROM user,sanpham WHERE user.iduser = sanpham.iduser AND idsp = '".$row['idsp']."' ";
+            $result1 = mysqli_query($conn,$sql1);
+            $row1 = mysqli_fetch_assoc($result1)?>
             <div class="user-chat">
-                <a href="#">
+                <a href="chat.php?user_id=<?php echo $row1['iduser']?>&&idsp=<?php echo $row1['idsp']?>">
                     <div class="img-user-chat">
-                        <img src="./images/mayanh.png" alt="">
+                     <?php echo '<img src="data:avatar;base64,'.base64_encode($row1['photo']).'"alt="">' ?>
                     </div>
                     <div class="info-chat">
-                        <div class="user-name-chat">hoangtoviet</div>
-                        <span class="product-chat">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est vel delectus eius ipsam voluptatem facere ex excepturi reprehenderit consectetur dolores sapiente et dicta, minima, voluptate laborum culpa laboriosam. Eaque, dolorem.</span>
+                        <div class="user-name-chat"><?php echo $row1['name'] ?></div>
+                        <span class="product-chat"><?php echo $row1['tensp'] ?></span>
                     </div>
                     <div class="img-product-chat">
-                        <img src="./images/mayanh.png" alt="">                
+                    <?php echo '<img src="data:avatar;base64,'.base64_encode($row1['photo1']).'"alt="">' ?>               
                     </div>
                 </a>
             </div>
-            <div class="user-chat">
-                <a href="#">
-                    <div class="img-user-chat">
-                        <img src="./images/mayanh.png" alt="">
-                    </div>
-                    <div class="info-chat">
-                        <div class="user-name-chat">hoangtoviet</div>
-                        <div class="product-chat">Máy ảnh</div>
-                    </div>
-                    <div class="img-product-chat">
-                        <img src="./images/mayanh.png" alt="">                
-                    </div>
-                </a>
-            </div>
+            <?php
+        }
+            else{
+                $sql1 = "SELECT user.iduser,sanpham.idsp,user.name,user.photo,sanpham.tensp,sanpham.photo AS photo1 FROM user,sanpham WHERE user.iduser = sanpham.iduser AND idsp = '".$row['idsp']."' ";
+                $result1 = mysqli_query($conn,$sql1);
+                $row1 = mysqli_fetch_assoc($result1);
 
-            <!-- <div class="delele-chat">
-                <button><a href="#">Xóa cuộc trò chuyện</a></button>
-            </div> -->
+                $sql2 = "SELECT user.iduser,user.name,user.photo FROM user WHERE iduser = '".$row['outgoing_msg_id']."'  ";
+                $result2 = mysqli_query($conn,$sql2);
+                $row2 = mysqli_fetch_assoc($result2);?>
+                <div class="user-chat">
+                <a href="chat.php?user_id=<?php echo $row2['iduser']?>&&idsp=<?php echo $row1['idsp']?>">
+                    <div class="img-user-chat">
+                     <?php echo '<img src="data:avatar;base64,'.base64_encode($row2['photo']).'"alt="">' ?>
+                    </div>
+                    <div class="info-chat">
+                        <div class="user-name-chat"><?php echo $row2['name'] ?></div>
+                        <span class="product-chat"><?php echo $row1['tensp'] ?></span>
+                    </div>
+                    <div class="img-product-chat">
+                    <?php echo '<img src="data:avatar;base64,'.base64_encode($row1['photo1']).'"alt="">' ?>               
+                    </div>
+                </a>
+            </div>
+    <?php
+            }    
+    }}
+?>
+            <div class="aside-right-chat">
+
+            </div>
         </div>
+
+        </div>
+    <?php
+    }else {
+?>       <div class="chat-container">
+<div class="aside-left-chat">
+<?php
+$sql = "SELECT DISTINCT idsp,outgoing_msg_id FROM messages WHERE incoming_msg_id = '".$_SESSION['iduser']."' OR outgoing_msg_id = '".$_SESSION['iduser']."' ORDER BY idsp,outgoing_msg_id";
+$result = mysqli_query($conn,$sql);
+if(mysqli_num_rows($result) > 0){
+while ($row = mysqli_fetch_assoc($result)){
+   if($row['outgoing_msg_id'] == $_SESSION['iduser']){
+   $sql1 = "SELECT user.iduser,sanpham.idsp,user.name,user.photo,sanpham.tensp,sanpham.photo AS photo1 FROM user,sanpham WHERE user.iduser = sanpham.iduser AND idsp = '".$row['idsp']."' ";
+   $result1 = mysqli_query($conn,$sql1);
+   $row1 = mysqli_fetch_assoc($result1)?>
+   <div class="user-chat">
+       <a href="chat.php?user_id=<?php echo $row1['iduser']?>&&idsp=<?php echo $row1['idsp']?>">
+           <div class="img-user-chat">
+            <?php echo '<img src="data:avatar;base64,'.base64_encode($row1['photo']).'"alt="">' ?>
+           </div>
+           <div class="info-chat">
+               <div class="user-name-chat"><?php echo $row1['name'] ?></div>
+               <span class="product-chat"><?php echo $row1['tensp'] ?></span>
+           </div>
+           <div class="img-product-chat">
+           <?php echo '<img src="data:avatar;base64,'.base64_encode($row1['photo1']).'"alt="">' ?>               
+           </div>
+       </a>
+   </div>
+   <?php
+}
+   else{
+       $sql1 = "SELECT user.iduser,sanpham.idsp,user.name,user.photo,sanpham.tensp,sanpham.photo AS photo1 FROM user,sanpham WHERE user.iduser = sanpham.iduser AND idsp = '".$row['idsp']."' ";
+       $result1 = mysqli_query($conn,$sql1);
+       $row1 = mysqli_fetch_assoc($result1);
+
+       $sql2 = "SELECT user.iduser,user.name,user.photo FROM user WHERE iduser = '".$row['outgoing_msg_id']."'  ";
+       $result2 = mysqli_query($conn,$sql2);
+       $row2 = mysqli_fetch_assoc($result2);?>
+       <div class="user-chat">
+       <a href="chat.php?user_id=<?php echo $row2['iduser']?>&&idsp=<?php echo $row1['idsp']?>">
+           <div class="img-user-chat">
+            <?php echo '<img src="data:avatar;base64,'.base64_encode($row2['photo']).'"alt="">' ?>
+           </div>
+           <div class="info-chat">
+               <div class="user-name-chat"><?php echo $row2['name'] ?></div>
+               <span class="product-chat"><?php echo $row1['tensp'] ?></span>
+           </div>
+           <div class="img-product-chat">
+           <?php echo '<img src="data:avatar;base64,'.base64_encode($row1['photo1']).'"alt="">' ?>               
+           </div>
+       </a>
+   </div>
+            
+       <?php
+       }}
+    ?></div>
         <div class="aside-right-chat">
         <div class="wrapper">
         <section class="chat-area">
@@ -69,6 +148,7 @@
     
         </div>
     </div>
+    <?php } }?>
     <script src="js/chat.js"></script>
 </body>
 </html>
