@@ -52,6 +52,7 @@
             <div class="delete-btn"><a href="editPost.php?id=<?php echo $row1['idsp'] ?>&&function=post"><button>Duyệt Lại</button></a></div>
             <div class="delete-btn"><a href="editPost.php?id=<?php echo $row1['idsp'] ?>&&function=delete"><button>Xóa</button></a></div>
             <div class="w3-container">
+              <!-- Lý do -->
   <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Lý Do</button>
 
   <div id="id01" class="w3-modal">

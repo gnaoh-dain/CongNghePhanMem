@@ -66,8 +66,9 @@ a {
   align-items: center;
 }
 
+
 .aside-right div {
-  margin-left: 20px;
+  margin-right: 20px;
   font-size: 16px;
 }
 
@@ -148,7 +149,7 @@ ul li {
 .dropdown li {
   width: 150px;
   padding: 10px;
-  text-align: center;
+  text-align: left;
 }
 
 .dropdown a {
@@ -756,6 +757,8 @@ textarea {
   margin: 0 5px;
   height: calc(100vh - 145px);
 }
+
+
 
 .input {
   display: flex;

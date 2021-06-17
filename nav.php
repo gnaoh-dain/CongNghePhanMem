@@ -62,6 +62,7 @@
             <ul class="dropdown">
               <li><a href="archive.php">Tin đã lưu</a></li>
               <li><a href="logout.php">Đăng xuất</a></li>
+              <li><a href="chat.php">Nhắn tin</a></li>
             </ul>
               </li>
               </ul>

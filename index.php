@@ -15,7 +15,7 @@ require 'nav.php'; ?>
       <a href="search.php?search=mayanh">
         <div class="detail-category">
           <div class="img-category">
-            <img src="./images/ec14dd4fc238e676e43be2a911414d4d_tn.png" alt="" />
+            <img src="./images/mayanh.png" alt="" />
           </div>
           <div class="title">Máy ảnh - Máy quay phim</div>
         </div>
