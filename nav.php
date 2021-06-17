@@ -11,7 +11,10 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     
@@ -58,6 +61,7 @@
             <li><a href="#"><i class="ri-more-line"></i> Thêm</a> 
             <ul class="dropdown">
               <li><a href="archive.php">Tin đã lưu</a></li>
+              <li><a href="chat.php">Nhắn tin</a></li>
               <li><a href="logout.php">Đăng xuất</a></li>
             </ul>
               </li>

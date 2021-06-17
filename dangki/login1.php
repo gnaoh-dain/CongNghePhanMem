@@ -83,6 +83,7 @@ include 'ketnoi.php';
         else{
             if($rows['password'] == ($_POST['pass'])){
                 $_SESSION['email'] = $rows['email'];
+                $_SESSION['iduser'] = $rows['iduser'];
                 header('location:http://localhost:81/CongNghePhanMem/index.php');
                 }
             else{
