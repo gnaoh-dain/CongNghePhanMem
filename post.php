@@ -38,7 +38,7 @@
       <?php 
         $a = 0;
         $b = 0;
-        $sqlii = "SELECT * from sanpham where iduser = '" . $row['iduser'] . "' AND level = 1 order by idsp DESC";
+        $sqlii = "SELECT * from sanpham where iduser = '" . $_SESSION['iduser'] . "' AND level = 1 ";
             $resultii = mysqli_query($conn, $sqlii);
             while ($row1 = mysqli_fetch_assoc($resultii)) {
         ?>
@@ -53,10 +53,10 @@
             <div class="delete-btn"><a href="editPost.php?id=<?php echo $row1['idsp'] ?>&&function=delete"><button>Xóa</button></a></div>
               <!-- Lý do -->
               
-              <div class="delete-btn"><a href="">
+              <div class="delete-btn">
 
                 <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black ">Lý Do</button>
-              </a></div>
+              </div>
 
               <div id="id01" class="w3-modal">
                 <div class="w3-modal-content">
