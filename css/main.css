@@ -66,7 +66,6 @@ a {
   align-items: center;
 }
 
-
 .aside-right div {
   margin-right: 20px;
   font-size: 16px;
@@ -758,8 +757,6 @@ textarea {
   height: calc(100vh - 145px);
 }
 
-
-
 .input {
   display: flex;
   position: absolute;
@@ -914,6 +911,22 @@ textarea {
 #listDone {
   display: none;
 }
-.w3-container {
-  margin-top: 100px;
+
+.w3-modal-container {
+  height: 300px;
+  width: 100px;
+  margin: auto;
 }
+
+.w3-container {
+  width: 80%;
+  margin: auto;
+  margin-top: 300px;
+}
+
+.cancel {
+  font-size: medium;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+

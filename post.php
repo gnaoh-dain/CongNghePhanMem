@@ -32,13 +32,13 @@
             <div class="delete-btn"><a href="editPost.php?id=<?php echo $rowi['idsp'] ?>&&function=delete"><button>Xóa</button></a></div>
           </div>
         </div>
-      <?php } ?>
       </div>
+      <?php } ?>
       <div id="listCancel">
       <?php 
-      $a = 0;
-      $b = 0;
-      $sqlii = "SELECT * from sanpham where iduser = '" . $row['iduser'] . "' AND level = 1 order by idsp DESC";
+        $a = 0;
+        $b = 0;
+        $sqlii = "SELECT * from sanpham where iduser = '" . $row['iduser'] . "' AND level = 1 order by idsp DESC";
             $resultii = mysqli_query($conn, $sqlii);
             while ($row1 = mysqli_fetch_assoc($resultii)) {
         ?>
@@ -51,25 +51,27 @@
             <div class="update-btn"><a href="editPost.php?id=<?php echo $row1['idsp'] ?>&&function=update"><button>Chỉnh sửa</button></a></div>
             <div class="delete-btn"><a href="editPost.php?id=<?php echo $row1['idsp'] ?>&&function=post"><button>Duyệt Lại</button></a></div>
             <div class="delete-btn"><a href="editPost.php?id=<?php echo $row1['idsp'] ?>&&function=delete"><button>Xóa</button></a></div>
-            <div class="w3-container">
               <!-- Lý do -->
-  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Lý Do</button>
+              
+              <div class="delete-btn"><a href="">
 
-  <div id="id01" class="w3-modal">
-    <div class="w3-modal-content">
-      <div class="w3-container">
-        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-        <?php echo $row1['lydo'] ; ?>
-      </div>
-    </div>
-  </div>
-</div>
-    </div>
-      </div>
+                <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black ">Lý Do</button>
+              </a></div>
+
+              <div id="id01" class="w3-modal">
+                <div class="w3-modal-content">
+                  <div class="w3-container">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                    <div class="cancel">Lý do từ chối</div>
+                    <?php echo $row1['lydo'] ; ?>
+                  </div>
+                </div>
+              </div>
           </div>
         </div>
-      <?php } ?>
       </div>
+      <?php } ?>
+    </div>
       <div id="listDone">
       <?php 
       $sql2 = "SELECT * from sanpham where iduser = '" . $row['iduser'] . "' AND level = 2 order by idsp DESC";
@@ -85,7 +87,7 @@
             <div class="delete-btn"><a href="editPost.php?id=<?php echo $row2['idsp'] ?>&&function=delete"><button>Xóa</button></a></div>
           </div>
         </div>
-      <?php } ?>
+        <?php } ?>
       </div>
 
   </div>
