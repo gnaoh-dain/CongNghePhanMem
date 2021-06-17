@@ -86,7 +86,8 @@ if( isset($_POST['category']) && $_POST['category'] != '' && isset($_POST['addre
       </div>
     </div>
 
-    
+    <?php require 'footer.php'; ?>
+
   </body>
 </html>
 <?php

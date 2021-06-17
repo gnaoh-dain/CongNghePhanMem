@@ -122,7 +122,9 @@
     document.getElementById("listCancel").style.display = "none"
     document.getElementById("listDone").style.display = "block"
   }
-</script>
+</script>      
+<?php require 'footer.php'; ?>
+
 </body>
 
 </html>

@@ -62,6 +62,8 @@ elseif(isset($_GET['search']) && $_GET['search'] == 'mypham'){
  ?>
       </div>
     </div>
+    <?php require 'footer.php'; ?>
+
   </body>
 </html>
 
