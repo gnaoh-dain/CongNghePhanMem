@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="nav-admin">
+      <div>
+        <div class="logo">
+          <a href="#"> <img src="../images/choOnline.png" alt="" /> </a>
+        </div>
+        <ul class="list-dropdown">
+          <li>
+            <a href="#"><i class="ri-more-line"></i> Thêm</a>
+            <ul class="dropdown">
+              <li><a href="user-management.html">Quản lý người dùng</a></li>
+              <li><a href="product-management.html">Quản lý sản phẩm</a></li>
+              <li><a href="#">Đăng xuất</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="refuse-container">
+      <form action="" class="form-refuse">
+        <div class="table">
+          <div>Người đăng</div>
+          <div>Tên sản phẩm</div>
+          <div>Hình ảnh</div>
+          <div>Giá tiền</div>
+          <div>Mô tả</div>
+          <div>Lý do</div>
+        </div>
+
+        <div class="product">
+            <div class="user-upload"><a href="#">hoangtoviet</a></div>
+            <div class="title">Đồng hồ nam</div>
+            <div class="img">
+              <img src="../images/ade9c711beeca600183ecbb8a3eca5a1.jpg" alt="">
+            </div>
+            <div class="price">100000đ</div>
+            <div class="describe">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quas optio, sit quaerat, aliquam voluptates omnis ad nulla totam minus rem aut fuga! Dignissimos incidunt aspernatur quibusdam quasi. Libero, doloribus.</div>
+            <div class="reason">
+                <div>
+                    <input type="checkbox" name="rs1"> 
+                    <label for="rs1">Hình ảnh không hợp lệ</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="rs2"> 
+                    <label for="rs2">Tên sản phẩm không hợp lệ</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="rs3"> 
+                    <label for="rs3">Giá sản phẩm không hợp lệ</label>
+                </div>
+            </div>
+          </div>
+
+          <div class="refuse-submit">
+              <button type="submit"><a href="#">Từ chối bài viết</a></button>
+          </div>
+      </form>
+    </div>
+
+  </body>
+</html>
