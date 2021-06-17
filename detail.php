@@ -47,13 +47,11 @@
             <div class="name-saller"><?php echo $rowi['name'] ?></div>
           </div>
           <div class="phoneNumber"><span>Số điện thoại:</span><?php echo $rowi['phone'] ?> </div>
-          <a href="chat.php?user_id=<?php echo $rowi['iduser']?>&&idsp=<?php echo $row['idsp'] ?>">
+          <a href="chat.html">
               <button class="btn-chat"><i class="ri-wechat-line"></i>Chat với người bán</button>
           </a>
         </div>
       </div>
     </div>
-    <?php require 'footer.php'; ?>
-
   </body>
 </html>

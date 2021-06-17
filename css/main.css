@@ -67,7 +67,7 @@ a {
 }
 
 .aside-right div {
-  margin-right: 20px;
+  margin-left: 20px;
   font-size: 16px;
 }
 
@@ -98,7 +98,6 @@ a {
   background-color: white;
   border-radius: 10px;
   position: absolute;
-  height: 42px;
 }
 
 .aside-left button {
@@ -148,7 +147,7 @@ ul li {
 .dropdown li {
   width: 150px;
   padding: 10px;
-  text-align: left;
+  text-align: center;
 }
 
 .dropdown a {
@@ -636,6 +635,7 @@ textarea {
   cursor: pointer;
 }
 
+/* Post */
 .post-container {
   width: 60%;
   margin: auto;
@@ -697,9 +697,9 @@ textarea {
 
 /* Chat */
 
-.chat-container {
+.chat-container{
   width: 100%;
-  height: calc(100vh - 145px);
+  height: 100vh;
   margin: auto;
   display: grid;
   grid-template-columns: 20% 80%;
@@ -707,57 +707,15 @@ textarea {
 
 .aside-left-chat {
   width: 100%;
-  height: calc(100vh - 145px);
+  background-color: violet;
 }
 
-.user-chat a {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 10px;
-  padding-bottom: 15px;
-}
-
-.user-chat:hover {
-  cursor: pointer;
-  background-color: rgba(255, 152, 111, 0.432);
-  box-shadow: 0 1px 7px 0 rgb(0 0 0 / 30%);
-}
-
-.img-user-chat img,
-.img-product-chat img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-}
-
-.user-name-chat {
-  font-size: 16px;
-  font-weight: 500;
-  white-space: nowrap;
-  width: 100px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-bottom: 7px;
-}
-
-.product-chat {
-  display: inline-block;
-  font-size: 12px;
-  white-space: nowrap;
-  width: 100px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.aside-right-chat {
+.aside-right-chat{
   position: relative;
-  margin: 0 5px;
-  height: calc(100vh - 145px);
+  margin:0 5px;
 }
 
-.input {
+.input{
   display: flex;
   position: absolute;
   bottom: 15px;
@@ -768,11 +726,11 @@ textarea {
   align-items: center;
 }
 
-.input label {
+.input label{
   margin-right: 10px;
 }
 
-.input input {
+.input input{ 
   width: 100%;
   height: 42px;
   border: none;
@@ -789,43 +747,7 @@ textarea {
   color: white;
 }
 
-.input button:hover {
-  cursor: pointer;
-}
-
-.input {
-  display: flex;
-  position: absolute;
-  bottom: 15px;
-  width: 100%;
-  background-color: white;
-  border-radius: 10px;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.input label {
-  margin-right: 10px;
-}
-
-.input input {
-  width: 100%;
-  height: 42px;
-  border: none;
-  background-color: white;
-  border-radius: 10px;
-}
-
-.input button {
-  width: 50px;
-  height: 42px;
-  border-radius: 10px;
-  border: 3px solid #ffba00;
-  background-color: #ffba00;
-  color: white;
-}
-
-.input button:hover {
+.input button:hover{
   cursor: pointer;
 }
 
@@ -859,7 +781,7 @@ textarea {
 .container img.right {
   float: right;
   margin-left: 20px;
-  margin-right: 0;
+  margin-right:0;
 }
 
 .time-right {
@@ -888,10 +810,6 @@ textarea {
   cursor: pointer;
   background-color: white;
   transition: 0.3s;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  border-radius: 10px;
 }
 
 .quanLy_item:hover {
@@ -902,106 +820,15 @@ textarea {
 .active {
   padding: 0px 17px;
   box-shadow: 0 1px 7px 0 rgb(0 0 0 / 30%);
-  background-color: #ffba00;
+  background-color: #FFBA00;
   font-weight: bold;
 }
-#listCancel {
+#listCancel{
   display: none;
 }
-#listDone {
+#listDone{
   display: none;
 }
-
-.w3-modal-container {
-  height: 300px;
-  width: 100px;
-  margin: auto;
-}
-
-.w3-container {
-  width: 80%;
-  margin: auto;
-  margin-top: 300px;
-}
-
-.cancel {
-  font-size: medium;
-  font-weight: 700;
-  margin-bottom: 50px;
-}
-footer{
-  margin-top: 50px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  padding: 50px 100px;
-  background: #919090;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-footer .footer-container{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
-footer .footer-container .noi-dung{
-  margin-right: 30px;
-}
-footer  .footer-container .noi-dung.about{
-  width:40%;
-}
-footer .footer-container .noi-dung.about h2{
-  position: relative;
-  color: #fff;
-  font-weight: 500;
-  margin-bottom: 15px;
-}
-footer .footer-container .noi-dung.about h2:before{
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 50px;
-  height: 2px;
-  background: #f00;
-}
-footer .footer-container .noi-dung.about p{
-  color: #999;
-}
-/*Thiết Lập Cho Thành Phần Icon Mạng Xã Hội*/
-.social-icon{
-  margin-top: 20px;
-  display: flex;
-}
-.social-icon li {
-  list-style: none;
-}
-.social-icon li a{
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  background: #222;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 10px;
-  text-decoration: none;
-  border-radius: 4px;
-}
-.social-icon li a:hover{
-  background: #f00;
-}
-.social-icon li a .fa{
-  color: #fff;
-  font-size: 20px;
-}
-.links h2{
-  position: relative;
-  color: #fff;
-  font-weight: 500;
-  margin-bottom: 15px;
+.w3-container{
+  margin-top: 100px ;
 }

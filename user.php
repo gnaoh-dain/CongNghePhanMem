@@ -99,8 +99,6 @@ if(!empty($row)){
         }
       }
     </script>
-          <?php require 'footer.php'; ?>
-
   </body>
 </html>
 <?php } } ?>

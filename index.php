@@ -15,7 +15,7 @@ require 'nav.php'; ?>
       <a href="search.php?search=mayanh">
         <div class="detail-category">
           <div class="img-category">
-            <img src="./images/mayanh.png" alt="" />
+            <img src="./images/ec14dd4fc238e676e43be2a911414d4d_tn.png" alt="" />
           </div>
           <div class="title">Máy ảnh - Máy quay phim</div>
         </div>
@@ -77,8 +77,5 @@ require 'nav.php'; ?>
       </div>
     </div>
     
-
-    
-      <?php require 'footer.php'; ?>
   </body>
 </html>
