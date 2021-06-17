@@ -3,8 +3,8 @@
 
     if(isset($_SESSION['iduser'])){
         include_once "ketnoi.php";
-        $outgoing_id = mysqli_real_escape_string($conn, $_POST['outgoing_id']); // saida_id
-        $incoming_id = mysqli_real_escape_string($conn, $_POST['incoming_id']); // entrada_id
+        $outgoing_id = mysqli_real_escape_string($conn, $_POST['outgoing_id']);
+        $incoming_id = mysqli_real_escape_string($conn, $_POST['incoming_id']); 
         $message = mysqli_real_escape_string($conn, $_POST['message']);
 
         if(!empty($message)) {
