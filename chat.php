@@ -1,4 +1,4 @@
-<?php session_start() ?>
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,10 +14,41 @@
     <link rel="stylesheet" href="./css/style.css" />
     <title>Document</title>
 </head>
-<body>
+<body> -->
+
+<?php 
+    require 'nav.php';
+?>
     <div class="chat-container">
         <div class="aside-left-chat">
-
+            <div class="user-chat">
+                <a href="#">
+                    <div class="img-user-chat">
+                        <img src="./images/mayanh.png" alt="">
+                    </div>
+                    <div class="info-chat">
+                        <div class="user-name-chat">hoangtoviet</div>
+                        <span class="product-chat">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est vel delectus eius ipsam voluptatem facere ex excepturi reprehenderit consectetur dolores sapiente et dicta, minima, voluptate laborum culpa laboriosam. Eaque, dolorem.</span>
+                    </div>
+                    <div class="img-product-chat">
+                        <img src="./images/mayanh.png" alt="">                
+                    </div>
+                </a>
+            </div>
+            <div class="user-chat">
+                <a href="#">
+                    <div class="img-user-chat">
+                        <img src="./images/mayanh.png" alt="">
+                    </div>
+                    <div class="info-chat">
+                        <div class="user-name-chat">hoangtoviet</div>
+                        <div class="product-chat">Máy ảnh</div>
+                    </div>
+                    <div class="img-product-chat">
+                        <img src="./images/mayanh.png" alt="">                
+                    </div>
+                </a>
+            </div>
         </div>
         <div class="aside-right-chat">
         <div class="wrapper">

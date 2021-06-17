@@ -98,6 +98,7 @@ a {
   background-color: white;
   border-radius: 10px;
   position: absolute;
+  height: 42px;
 }
 
 .aside-left button {
@@ -635,7 +636,6 @@ textarea {
   cursor: pointer;
 }
 
-/* Post */
 .post-container {
   width: 60%;
   margin: auto;
@@ -697,9 +697,9 @@ textarea {
 
 /* Chat */
 
-.chat-container{
+.chat-container {
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 145px);
   margin: auto;
   display: grid;
   grid-template-columns: 20% 80%;
@@ -707,15 +707,57 @@ textarea {
 
 .aside-left-chat {
   width: 100%;
-  background-color: violet;
+  height: calc(100vh - 145px);
 }
 
-.aside-right-chat{
+.user-chat a {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  padding-bottom: 15px;
+}
+
+.user-chat:hover {
+  cursor: pointer;
+  background-color: rgba(255, 152, 111, 0.432);
+  box-shadow: 0 1px 7px 0 rgb(0 0 0 / 30%);
+}
+
+.img-user-chat img,
+.img-product-chat img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.user-name-chat {
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 7px;
+}
+
+.product-chat {
+  display: inline-block;
+  font-size: 12px;
+  white-space: nowrap;
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.aside-right-chat {
   position: relative;
-  margin:0 5px;
+  margin: 0 5px;
+  height: calc(100vh - 145px);
 }
 
-.input{
+.input {
   display: flex;
   position: absolute;
   bottom: 15px;
@@ -726,11 +768,11 @@ textarea {
   align-items: center;
 }
 
-.input label{
+.input label {
   margin-right: 10px;
 }
 
-.input input{ 
+.input input {
   width: 100%;
   height: 42px;
   border: none;
@@ -747,7 +789,43 @@ textarea {
   color: white;
 }
 
-.input button:hover{
+.input button:hover {
+  cursor: pointer;
+}
+
+.input {
+  display: flex;
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.input label {
+  margin-right: 10px;
+}
+
+.input input {
+  width: 100%;
+  height: 42px;
+  border: none;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.input button {
+  width: 50px;
+  height: 42px;
+  border-radius: 10px;
+  border: 3px solid #ffba00;
+  background-color: #ffba00;
+  color: white;
+}
+
+.input button:hover {
   cursor: pointer;
 }
 
@@ -781,7 +859,7 @@ textarea {
 .container img.right {
   float: right;
   margin-left: 20px;
-  margin-right:0;
+  margin-right: 0;
 }
 
 .time-right {
@@ -810,6 +888,10 @@ textarea {
   cursor: pointer;
   background-color: white;
   transition: 0.3s;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
 }
 
 .quanLy_item:hover {
@@ -820,15 +902,15 @@ textarea {
 .active {
   padding: 0px 17px;
   box-shadow: 0 1px 7px 0 rgb(0 0 0 / 30%);
-  background-color: #FFBA00;
+  background-color: #ffba00;
   font-weight: bold;
 }
-#listCancel{
+#listCancel {
   display: none;
 }
-#listDone{
+#listDone {
   display: none;
 }
-.w3-container{
-  margin-top: 100px n;
+.w3-container {
+  margin-top: 100px;
 }
