@@ -1,0 +1,19 @@
+node_modules
+public/
+.env
+
+# Ignore all files in the vendor directory
+vendor/
+
+# Ignore all files in the test directory
+test/
+
+# Ignore the webpack.config.js file
+webpack.config.js
+
+# Ignore the yarn.lock file
+yarn.lock
+
+# Ignore the .env file
+.env
+
